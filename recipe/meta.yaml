@@ -21,6 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
+    - einops
     - npe2
     - napari
     - numpy
