@@ -26,6 +26,8 @@ requirements:
     - napari
     - numpy
     - qtpy
+    - pip
+      - morphosamplers
 
 test:
   imports:
