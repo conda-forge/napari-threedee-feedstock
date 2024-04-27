@@ -36,6 +36,8 @@ requirements:
     - morphosamplers
 
 test:
+  requires:
+    - pyqt
   imports:
     - napari_threedee
   commands:
