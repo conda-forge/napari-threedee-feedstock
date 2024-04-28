@@ -22,6 +22,7 @@ requirements:
   run:
     - python >=3.8
     - einops
+    - igl
     - magicgui
     - napari
     - numpy
@@ -42,7 +43,6 @@ test:
     - pip check
   requires:
     - pyqt
-    - igl
     - pip
 
 about:
