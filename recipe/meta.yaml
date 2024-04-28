@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.8
     - einops
-    - igl
+    # - igl # feedstock currently abandoned
     - magicgui
     - napari
     - numpy
