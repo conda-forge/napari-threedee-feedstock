@@ -39,11 +39,12 @@ requirements:
 test:
   imports:
     - napari_threedee
-  commands:
-    - pip check
+  # commands:
+  # pip check fails to recognize igl as libigl
+  #  - pip check
   requires:
     - pyqt
-    - pip
+  #  - pip
 
 about:
   home: https://github.com/alisterburt/napari-threedee
