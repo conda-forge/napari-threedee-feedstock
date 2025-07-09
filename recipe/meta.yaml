@@ -1,13 +1,13 @@
 {% set name = "napari-threedee" %}
-{% set version = "0.0.28" %}
+{% set version = "0.0.29" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c6e9f9262e2c627473b15dc8de615549b1b4cdbf14744659b5eda5ffe5446c6a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 478c2522ae79b1fa48341d34dd60cdd6139be7418c176ef9f9228b7eed0d8412
 
 build:
   noarch: python
