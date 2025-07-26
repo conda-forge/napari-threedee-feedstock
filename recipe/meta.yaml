@@ -1,5 +1,6 @@
 {% set name = "napari-threedee" %}
-{% set version = "0.0.28" %}
+{% set version = "0.0.29" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,35 +8,38 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c6e9f9262e2c627473b15dc8de615549b1b4cdbf14744659b5eda5ffe5446c6a
+  sha256: 478c2522ae79b1fa48341d34dd60cdd6139be7418c176ef9f9228b7eed0d8412
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools-scm
-    - setuptools
+    - hatch-vcs
+    - hatchling
     - pip
   run:
     - python >={{ python_min }}
     - einops
+    - imageio >=2.5.0
     # - igl # feedstock currently abandoned
     - magicgui
-    - napari
+    - morphosamplers
+    - mrcfile
+    - napari >=0.5.0
     - numpy
     - pandas
+    - pooch
     - pydantic
     - psygnal
     - qtpy
     - scipy
     - superqt
     - vispy
-    - zarr
-    - morphosamplers
+    - zarr <3
 
 test:
   imports:
